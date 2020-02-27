@@ -40,24 +40,24 @@
             
         </StackPanel>
 
-        <StackPanel x:Name="spTopBar"
-                    DockPanel.Dock="Top"
-                    Height="50" HorizontalAlignment="Stretch"
-                    Background="LightGreen"
-                    Orientation="Horizontal">
+        <ToolBarOverflowPanel x:Name="spTopBar"
+                              DockPanel.Dock="Top"
+                              Background="LightGreen"
+                              HorizontalAlignment="Right"
+                              Margin="15">
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal">
                 <Image Source="images\personImage.PNG" 
-                       Width="30" Height="30"></Image>
+                       Width="30" Margin="10 0"></Image>
                 <Label>Вы не представились системе</Label>
             </StackPanel>
 
-            
+                
             <Label>Обсуждение</Label>
             <Label>Вклад</Label>
             <Label>Создать учетную запись</Label>
             <Label>Войти</Label>
-        </StackPanel>
+        </ToolBarOverflowPanel>
 
         <StackPanel x:Name="spBottomBar"
                     DockPanel.Dock="Bottom"
@@ -65,8 +65,20 @@
                     Background="LightCoral">
         </StackPanel>
 
-        <StackPanel x:Name="spCenterBar"
-                    Background="LightCyan">
-        </StackPanel>
+        <TabControl x:Name="spCenterBar"
+                    Background="LightCyan"
+                    VerticalContentAlignment="Top">
+            <TabItem Header="Заглавная">
+                <Border Height="100" 
+                        VerticalAlignment="Top"
+                        Margin="20"
+                        Background="LightGray">
+                    <FlowDocument>
+                        <Paragraph></Paragraph>
+                    </FlowDocument>
+                </Border>
+            </TabItem>
+            <TabItem Header="Обсуждение"></TabItem>
+        </TabControl>
     </DockPanel>
 </Window>
