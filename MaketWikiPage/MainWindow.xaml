@@ -5,14 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaketWikiPage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="900">
+        Title="MainWindow" Height="800" Width="1300">
+
+    <Window.Resources>
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+        </Style>
+    </Window.Resources>
+    
     <DockPanel>
         <StackPanel x:Name="spLeftBar"
                     DockPanel.Dock="Left"
                     Width="170"
                     Background="Yellow">
 
-            <Image Source="images\wikiLogo.PNG"
+            <Image Source="C:\Users\Vladimir\source\repos\MaketWikiPage\MaketWikiPage\images\wikiLogo.PNG"
                    Width="130" Height="130" Margin="20"></Image>
 
             <StackPanel  Margin="0 10">
@@ -46,17 +54,17 @@
                               HorizontalAlignment="Right"
                               Margin="15">
 
-            <StackPanel Orientation="Horizontal">
-                <Image Source="images\personImage.PNG" 
+            <StackPanel Orientation="Horizontal" Margin="5 0">
+                <Image Source="C:\Users\Vladimir\source\repos\MaketWikiPage\MaketWikiPage\images\personImage.PNG" 
                        Width="30" Margin="10 0"></Image>
                 <Label>Вы не представились системе</Label>
             </StackPanel>
 
-                
-            <Label>Обсуждение</Label>
-            <Label>Вклад</Label>
-            <Label>Создать учетную запись</Label>
-            <Label>Войти</Label>
+
+            <Label Margin="5 0">Обсуждение</Label>
+            <Label Margin="5 0">Вклад</Label>
+            <Label Margin="5 0">Создать учетную запись</Label>
+            <Label Margin="5 0">Войти</Label>
         </ToolBarOverflowPanel>
 
         <StackPanel x:Name="spBottomBar"
@@ -69,13 +77,54 @@
                     Background="LightCyan"
                     VerticalContentAlignment="Top">
             <TabItem Header="Заглавная">
-                <Border Height="100" 
+                <Border Height="150" MaxHeight="550"
                         VerticalAlignment="Top"
                         Margin="20"
-                        Background="LightGray">
-                    <FlowDocument>
-                        <Paragraph></Paragraph>
-                    </FlowDocument>
+                        Background="#f8f9fa"
+                        Style="{StaticResource BorderStyle}">
+
+                    <WrapPanel Orientation="Horizontal">
+                        <StackPanel>
+                            <Label>qqqqqqqqqqqqqqqqqqqqqqq</Label>
+                            <Label>qqqqqqqqqqqqqqqqqqqqqqq</Label>
+                        </StackPanel>
+
+                        <StackPanel Width="400"></StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <Label HorizontalContentAlignment="Right">wwwwwwwwwwwwwwwwwwwwwww</Label>
+                            <Label>wwwwwwwwwwwwwwwwwwwwwww</Label>
+                        </StackPanel>
+                    </WrapPanel>
+                    
+                    <!--<FlowDocumentPageViewer>
+                        <FlowDocument ColumnWidth="450"
+                                      ColumnGap="100">
+                            <Paragraph TextAlignment="Left">
+                                <Label FontSize="28">Добро пожаловать в Википедию,</Label>
+                                <Label FontSize="14">свободную энциклопедию, которую может редактировать каждый.</Label>
+                            </Paragraph>
+
+                            <Paragraph TextAlignment="Right">
+                                <Label>Сейчас в Википедии 1 600 148 статей на русском языке.</Label>
+                            </Paragraph>
+
+                            <Paragraph TextAlignment="Right">
+                                <Label>
+                                    <Bold>Порталы</Bold>
+                                </Label>
+                                <Label>
+                                    <Bold>Справка</Bold>
+                                </Label>
+
+                                <Button Background="#f8f9fa"
+                                        Padding="5">
+                                    <Bold>Создать статью</Bold>
+                                </Button>
+                            </Paragraph>
+                            
+                        </FlowDocument>
+                    </FlowDocumentPageViewer>-->
                 </Border>
             </TabItem>
             <TabItem Header="Обсуждение"></TabItem>
