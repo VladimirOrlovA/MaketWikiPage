@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:MaketWikiPage"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <StackPanel x:Name="spLeftBar"
+                    DockPanel.Dock="Left"
+                    Width="150"
+                    Background="Yellow">
+
+            <Image Source="C:\Users\Vladimir\source\repos\MaketWikiPage\MaketWikiPage\Images"
+                   Width="100" Height="100"></Image>
+        </StackPanel>
+
+        <StackPanel x:Name="spTopBar"
+                    DockPanel.Dock="Top"
+                    Height="50"
+                    Background="LightGreen">
+        </StackPanel>
+
+        <StackPanel x:Name="spBottomBar"
+                    DockPanel.Dock="Bottom"
+                    Height="100"
+                    Background="LightCoral">
+        </StackPanel>
+
+        <StackPanel x:Name="spCenterBar"
+                    Background="LightCyan">
+        </StackPanel>
+    </DockPanel>
 </Window>
