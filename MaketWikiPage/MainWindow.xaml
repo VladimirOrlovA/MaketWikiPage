@@ -5,21 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaketWikiPage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="900">
     <DockPanel>
         <StackPanel x:Name="spLeftBar"
                     DockPanel.Dock="Left"
-                    Width="150"
+                    Width="170"
                     Background="Yellow">
 
-            <Image Source="C:\Users\Vladimir\source\repos\MaketWikiPage\MaketWikiPage\Images"
-                   Width="100" Height="100"></Image>
+            <Image Source="images\wikiLogo.PNG"
+                   Width="130" Height="130" Margin="20"></Image>
+
+            <StackPanel  Margin="0 10">
+                <Label>Заглавная страница</Label>
+                <Label>Рубрикация</Label>
+                <Label>Указатель А — Я</Label>
+                <Label>Избранные статьи</Label>
+                <Label>Случайная статья</Label>
+                <Label>Текущие события</Label>
+            </StackPanel>
+
+            <StackPanel Margin="0 10">
+                <Label>Участие</Label>
+                <StackPanel>
+                    <Label>Сообщить об ошибке</Label>
+                    <Label>Сообщество</Label>
+                    <Label>Форум</Label>
+                    <Label>Свежие правки</Label>
+                    <Label>Новые страницы</Label>
+                    <Label>Справка</Label>
+                    <Label>Пожертвовать</Label>
+                </StackPanel>
+            </StackPanel>
+            
+            
         </StackPanel>
 
         <StackPanel x:Name="spTopBar"
                     DockPanel.Dock="Top"
-                    Height="50"
-                    Background="LightGreen">
+                    Height="50" HorizontalAlignment="Stretch"
+                    Background="LightGreen"
+                    Orientation="Horizontal">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <Image Source="images\personImage.PNG" 
+                       Width="30" Height="30"></Image>
+                <Label>Вы не представились системе</Label>
+            </StackPanel>
+
+            
+            <Label>Обсуждение</Label>
+            <Label>Вклад</Label>
+            <Label>Создать учетную запись</Label>
+            <Label>Войти</Label>
         </StackPanel>
 
         <StackPanel x:Name="spBottomBar"
